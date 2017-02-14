@@ -40,6 +40,14 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
     @IBOutlet weak var inputEnableImageView: UIImageView!
     @IBOutlet weak var enableUIView2: UIView!
     @IBOutlet weak var inputEnableTextView: UITextView!
+    @IBOutlet weak var liveGoalLabel: UILabel!
+    @IBOutlet weak var gatherGoalLabel: UILabel!
+    @IBOutlet weak var careGoalLabel: UILabel!
+    @IBOutlet weak var enableGoalLabel: UILabel!
+    @IBOutlet weak var inputLiveLabel: UILabel!
+    @IBOutlet weak var inputGatherLabel: UILabel!
+    @IBOutlet weak var inputCareLabel: UILabel!
+    @IBOutlet weak var inputEnableLabel: UILabel!
     
     var blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     var isMyGoals: Bool?
@@ -73,7 +81,7 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
         let imageViews: [UIImageView] = [liveImageView, inputImageView, gatherImageView, inputGatherImageView, careImageView, inputCareImageView, enableImageView, inputEnableImageView]
         let textViews: [UITextView] = [liveTextView, inputTextView, gatherTextView, inputGatherTextView, careTextView, inputCareTextView, enableTextView, inputEnableTextView]
         
-        setupImages()
+        setupGoalLabels()
         updateWithText()
         
         if let isMyGoals = isMyGoals {
@@ -87,6 +95,9 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
                 updateBackgroundColors(uiViews: uiViews, uiImageViews: imageViews, uiTextViews: textViews, color: UIColor.myRedColor())
             }
         }
+        
+//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+//        blurEffectView.addGestureRecognizer(tapRecognizer)
     }
     
     func updateWithText() {
@@ -171,26 +182,26 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
         }
     }
     
-    func setupImages() {
+    func setupGoalLabels() {
         if let isMyGoals = isMyGoals {
             if isMyGoals {
-                liveImageView.image = UIImage(named: "Live2")
-                inputImageView.image = UIImage(named: "Live2")
-                gatherImageView.image = UIImage(named: "Gather2")
-                inputGatherImageView.image = UIImage(named: "Gather2")
-                careImageView.image = UIImage(named: "Care2")
-                inputCareImageView.image = UIImage(named: "Care2")
-                enableImageView.image = UIImage(named: "Enable2")
-                inputEnableImageView.image = UIImage(named: "Enable2")
+                liveGoalLabel.text = "To live the gospel of Jesus Christ, I will:"
+                gatherGoalLabel.text = "To gather Israel through missionary work, I will:"
+                careGoalLabel.text = "To care for the poor and needy, I will:"
+                enableGoalLabel.text = "To enable the salvation of the dead, I will:"
+                inputLiveLabel.text = "To live the gospel of Jesus Christ, I will:"
+                inputGatherLabel.text = "To gather Israel through missionary work, I will:"
+                inputCareLabel.text = "To care for the poor and needy, I will:"
+                inputEnableLabel.text = "To enable the salvation of the dead, I will:"
             } else {
-                liveImageView.image = UIImage(named: "Live")
-                inputImageView.image = UIImage(named: "Live")
-                gatherImageView.image = UIImage(named: "Gather")
-                inputGatherImageView.image = UIImage(named: "Gather")
-                careImageView.image = UIImage(named: "Care")
-                inputCareImageView.image = UIImage(named: "Care")
-                enableImageView.image = UIImage(named: "Enable")
-                inputEnableImageView.image = UIImage(named: "Enable")
+                liveGoalLabel.text = "To live the gospel of Jesus Christ, we will:"
+                gatherGoalLabel.text = "To gather Israel through missionary work, we will:"
+                careGoalLabel.text = "To care for the poor and needy, we will:"
+                enableGoalLabel.text = "To enable the salvation of the dead, we will:"
+                inputLiveLabel.text = "To live the gospel of Jesus Christ, we will:"
+                inputGatherLabel.text = "To gather Israel through missionary work, we will:"
+                inputCareLabel.text = "To care for the poor and needy, we will:"
+                inputEnableLabel.text = "To enable the salvation of the dead, we will:"
             }
         }
     }
