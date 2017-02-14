@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FamilyGoals" representedClassName="FamilyGoals" syncable="YES" codeGenerationType="class">
+        <attribute name="care" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gather" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="live" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MyGoals" representedClassName="MyGoals" syncable="YES" codeGenerationType="class">
+        <attribute name="care" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enable" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gather" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="live" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MyGoals" positionX="-54" positionY="-9" width="128" height="105"/>
+        <element name="FamilyGoals" positionX="-36" positionY="36" width="128" height="105"/>
+    </elements>
+</model>
