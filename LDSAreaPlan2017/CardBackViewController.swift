@@ -95,9 +95,6 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
                 updateBackgroundColors(uiViews: uiViews, uiImageViews: imageViews, uiTextViews: textViews, color: UIColor.myRedColor())
             }
         }
-        
-//        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-//        blurEffectView.addGestureRecognizer(tapRecognizer)
     }
     
     func updateWithText() {
@@ -244,6 +241,7 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
             saveGoalText(text: text, key: "LiveGoal")
             updateWithText()
         }
+        inputTextView.resignFirstResponder()
         view.endEditing(true)
         removeBlurEffect()
     }
@@ -306,6 +304,7 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
         addBlurEffect()
     }
     
+    // Flips card back to the front with custom segue
     @IBAction func dismissButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
