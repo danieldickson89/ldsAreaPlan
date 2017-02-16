@@ -33,6 +33,13 @@ class CardFrontViewController: UIViewController {
         myGoalsButton.setTitleColor(UIColor.myBlueColor(), for: .normal)
         familyGoalsButton.setTitleColor(UIColor.myRedColor(), for: .normal)
         
+        familyGoalsButton.titleLabel?.numberOfLines = 1
+        familyGoalsButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        familyGoalsButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
+        
+        myGoalsButton.titleLabel?.numberOfLines = 1
+        myGoalsButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        myGoalsButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
     }
 
     

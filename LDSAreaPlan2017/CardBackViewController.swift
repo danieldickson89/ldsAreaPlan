@@ -48,6 +48,7 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
     @IBOutlet weak var inputGatherLabel: UILabel!
     @IBOutlet weak var inputCareLabel: UILabel!
     @IBOutlet weak var inputEnableLabel: UILabel!
+    @IBOutlet weak var goBackButton: UIButton!
     
     var blurEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
     var isMyGoals: Bool?
@@ -95,6 +96,10 @@ class CardBackViewController: UIViewController, UITextFieldDelegate, UITextViewD
                 updateBackgroundColors(uiViews: uiViews, uiImageViews: imageViews, uiTextViews: textViews, color: UIColor.myRedColor())
             }
         }
+        
+        goBackButton.titleLabel?.numberOfLines = 1
+        goBackButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        goBackButton.titleLabel?.lineBreakMode = NSLineBreakMode.byClipping
     }
     
     func updateWithText() {
